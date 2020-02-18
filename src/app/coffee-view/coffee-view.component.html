@@ -1,0 +1,61 @@
+
+<ul class="clr-timeline clr-timeline-horizontal">
+  <li class="clr-timeline-step">
+    <div class="clr-timeline-step-header">2019年</div>
+    <clr-icon [attr.shape]="yearData[0].icon" aria-label="Not started" (click)="doClick(2019)" style="cursor: pointer"></clr-icon>
+    <div class="clr-timeline-step-body">
+      <span class="clr-timeline-step-title">Saldo: {{yearData[0].balance | currency: 'JPY'}}</span>
+      <hr>
+      <span class="clr-timeline-step-description">Saldo anterior: {{0 | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total arrecadado: {{yearData[0].valuein | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total gasto: {{yearData[0].valueout | currency: 'JPY'}}</span>
+    </div>
+  </li>
+  <li class="clr-timeline-step">
+    <div class="clr-timeline-step-header">2020年</div>
+    <clr-icon [attr.shape]="yearData[1].icon" aria-label="Not started" (click)="doClick(2020)" style="cursor: pointer"></clr-icon>
+    <div class="clr-timeline-step-body">    
+      <span class="clr-timeline-step-title">Saldo: {{yearData[1].balance | currency: 'JPY'}}</span>
+      <hr>
+      <span class="clr-timeline-step-description">Saldo anterior: {{yearData[0].balance | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total arrecadado: {{yearData[1].valuein | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total gasto: {{yearData[1].valueout | currency: 'JPY'}}</span>
+    </div>
+  </li>
+  <li class="clr-timeline-step">
+    <div class="clr-timeline-step-header">2021年</div>
+    <clr-icon [attr.shape]="yearData[2].icon" aria-label="Not started" (click)="doClick(2021)" style="cursor: pointer"></clr-icon>
+    <div class="clr-timeline-step-body">    
+      <span class="clr-timeline-step-title">Saldo: {{yearData[2].balance | currency: 'JPY'}}</span>
+      <hr>
+      <span class="clr-timeline-step-description">Saldo anterior: {{yearData[1].balance | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total arrecadado: {{yearData[2].valuein | currency: 'JPY'}}</span>
+      <span class="clr-timeline-step-description">Total gasto: {{yearData[2].valueout | currency: 'JPY'}}</span>
+    </div>
+  </li>
+</ul>
+
+<table mat-table [dataSource]="data" class="mat-elevation-z2" style="font-family: metropolis; font-size: 12px; width: 100%">
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold">Date</th>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px"> {{element.date}} </td>
+  </ng-container>
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold">Name</th>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px"> {{element.name}} </td>
+  </ng-container>
+  <ng-container matColumnDef="valueout">
+    <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">Out</th>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{element.valueout | currency: 'JPY' }} </td>
+  </ng-container>
+  <ng-container matColumnDef="valuein">
+    <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">In</th>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{element.valuein | currency: 'JPY' }} </td>
+  </ng-container>
+  <ng-container matColumnDef="balance">
+    <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">Balance</th>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{element.balance | currency: 'JPY' }} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
