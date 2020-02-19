@@ -8,9 +8,8 @@ const app = express();
 app.use(express.static(__dirname + '/dist/coffee'));
 
 app.get('/*', function(req,res) {
-    
-res.sendFile(path.join(__dirname+'/dist/coffee/index.html'));
+  res.sendFile(path.join(__dirname+'/dist/coffee/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 5000);
