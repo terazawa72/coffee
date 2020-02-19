@@ -46,11 +46,11 @@
   </ng-container>
   <ng-container matColumnDef="valueout">
     <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">Out</th>
-    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{element.valueout | currency: 'JPY' }} </td>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{(element.valueout>0?element.valueout:'') | currency: 'JPY' }} </td>
   </ng-container>
   <ng-container matColumnDef="valuein">
     <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">In</th>
-    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{element.valuein | currency: 'JPY' }} </td>
+    <td mat-cell *matCellDef="let element" style="font-size: 12px; text-align: right"> {{(element.valuein>0?element.valuein:'') | currency: 'JPY' }} </td>
   </ng-container>
   <ng-container matColumnDef="balance">
     <th mat-header-cell *matHeaderCellDef style="background-color: #fbfbfb; font-size: 13px; font-weight: bold; text-align: right">Balance</th>
