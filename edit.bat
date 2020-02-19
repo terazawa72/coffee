@@ -1,1 +1,1 @@
-"C:\Program Files\Sublime Text 3\sublime_text.exe" C:\Suriemu\Site\Coffee
+call "C:\Program Files\Sublime Text 3\sublime_text.exe" C:\Suriemu\Site\Coffee
