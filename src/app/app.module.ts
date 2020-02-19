@@ -24,7 +24,6 @@ import { CoffeeViewComponent } from './coffee-view/coffee-view.component';
     BrowserAnimationsModule,
   ],
   providers: [
-    //{provide: NgLocalization, useClass: NgLocaleLocalization}
   ],
   bootstrap: [AppComponent]
 })
