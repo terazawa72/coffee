@@ -11,6 +11,7 @@ export class CoffeeViewComponent implements OnInit {
   data: any[];
   displayedColumns: string[] = ['date', 'name', 'valueout', 'valuein', 'balance'];
   currentYear = -1;
+  currentDate: Date = new Date();
   
   yearData = [
     {year: 2019, balance: 0, valuein: 0, valueout: 0, icon: 'circle'},
