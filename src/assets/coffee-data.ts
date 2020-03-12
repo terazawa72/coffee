@@ -46,5 +46,11 @@ export const coffeeData = [
 {sequence: 441, date: '02/07/2020', name: 'Contribuicao Terazawa', valueout: 0, valuein: 1000, balance: 2256}, 
 {sequence: 451, date: '02/17/2020', name: 'Café 2x', valueout: 1396, valuein: 0, balance: 860}, 
 {sequence: 461, date: '02/17/2020', name: 'Açucar', valueout: 228, valuein: 0, balance: 632}, 
+{sequence: 471, date: '02/24/2020', name: 'Contribuicao Mario', valueout: 0, valuein: 1000, balance: 1632}, 
+{sequence: 481, date: '02/28/2020', name: 'Creme', valueout: 248, valuein: 0, balance: 1384}, 
+{sequence: 491, date: '02/28/2020', name: 'Café', valueout: 698, valuein: 0, balance: 686}, 
+{sequence: 501, date: '02/28/2020', name: 'Café (nescafe)', valueout: 748, valuein: 0, balance: -62}, 
+{sequence: 511, date: '02/28/2020', name: 'Copos 2x', valueout: 196, valuein: 0, balance: -258}, 
+{sequence: 521, date: '02/28/2020', name: 'Colheres', valueout: 298, valuein: 0, balance: -556}, 
 
 ]
