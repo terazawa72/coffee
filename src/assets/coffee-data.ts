@@ -63,5 +63,6 @@ export const coffeeData = [
 {sequence: 611, date: '06/01/2020', name: 'Copos', valueout: 98, valuein: 0, balance: -588}, 
 {sequence: 621, date: '06/22/2020', name: 'Contribuicao Terazawa', valueout: 0, valuein: 1000, balance: 412}, 
 {sequence: 631, date: '06/22/2020', name: 'Contribuicao Mario', valueout: 0, valuein: 1000, balance: 1412}, 
+{sequence: 641, date: '06/29/2020', name: 'Contribuicao Tatiana', valueout: 0, valuein: 1000, balance: 2412}, 
 
 ]
